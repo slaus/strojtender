@@ -1,0 +1,30 @@
+.wrapper {
+
+    &__sidebar {
+        display: flex;
+        gap: $index;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+
+        .sidebar {
+            flex: 0 1 25%;
+
+            @media screen and (max-width: 767px) {
+                flex: 0 1 100%;
+                padding-bottom: 0;
+                order: 1;
+            }
+        }
+
+        .main {
+            flex: 0 1 75%;
+
+            @media screen and (max-width: 767px) {
+                order: 2;
+                flex: 0 1 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+.subheader {
+    position: relative;
+    height: 300px;
+    width: 100%;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    &__block {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    &__breadcrumb {
+        position: relative;
+        z-index: 1;
+        color: $whiteColor;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto calc($index / 2);
+        font-size: 14px;
+        padding: 0 20px;
+
+        @media screen and (max-width: 991px) {
+            height: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        li+li {
+            margin-left: 25px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: -15px;
+                top: 50%;
+                display: block;
+                width: 5px;
+                height: 5px;
+                background: $whiteColor;
+                transform: translateY(-50%) rotate(45deg);
+            }
+        }
+
+        li {
+            position: relative;
+        }
+
+        a {
+            color: $whiteColor;
+
+            &:hover {
+                color: $yellowColor;
+            }
+        }
+    }
+
+    &__title {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: calc(1440px - 40px);
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        position: relative;
+        font-size: 30px;
+        color: $yellowColor;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 1;
+        padding: 5px 20px;
+        border-left: 4px solid $yellowColor;
+        z-index: 1;
+        font-family: 'Oswald',sans-serif;
+
+        @media screen and (max-width: 991px) {
+            font-size: 28px;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 26px;
+        }
+    }
+}

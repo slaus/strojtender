@@ -1,0 +1,39 @@
+.article {
+    &+& {
+        margin-top: calc($index * 2);
+    }
+
+    &>img {
+        margin: calc($index / 2) auto $index;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: $index;
+
+        .news__date {
+            position: unset;
+        }
+
+        .main__title {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: $blackColor;
+
+            &:hover {
+                color: $yellowColor;
+            }
+        }
+    }
+
+    .main__subtitle {
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,32 @@
+.price {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    margin: $index auto;
+    gap: $index;
+    padding: $index;
+    background: #f1f1f1;
+    border: 5px solid #e3e3e3;
+
+    @media screen and (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+
+    &__list {}
+
+    &__item {
+
+        &:before {
+            background: $whiteColor;
+        }
+    }
+
+    &__total {
+        font-size: 40px;
+        font-size: calc($index * 1.38);
+        text-align: center;
+        font-family: 'Oswald',sans-serif;
+        padding: calc($index / 2) 0;
+    }
+}

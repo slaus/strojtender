@@ -1,0 +1,345 @@
+// Footer
+.footer {
+    display: block;
+    margin-top: auto;
+    background: $blackColor;
+    color: $grayLColor;
+    font-size: 15px;
+
+    &__top {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    &__bottom {
+        background: $blackDColor;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+
+    &__block {
+        display: flex;
+        gap: $index;
+
+        @media screen and (max-width: 991px) {
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+
+        &-moto {
+            display: flex;
+            flex-direction: column;
+            flex: 0 1 25%;
+
+            @media screen and (max-width: 991px) {
+                flex: 0 1 50%;
+                flex: 0 1 calc(50% - 10px);
+            }
+
+            @media screen and (max-width: 767px) {
+                flex: 0 1 100%;
+                align-items: center;
+                text-align: center;
+            }
+
+            &--logo {
+                max-width: 200px;
+                margin-bottom: $index;
+            }
+
+            &--description {
+                margin-bottom: $index;
+            }
+
+            &--link {
+                color: $yellowColor;
+
+                &:hover {
+                    color: $yellowDColor
+                }
+            }
+        }
+
+        &-news {
+            display: flex;
+            flex-direction: column;
+            flex: 0 1 25%;
+
+            @media screen and (max-width: 991px) {
+                flex: 0 1 50%;
+                flex: 0 1 calc(50% - 10px);
+            }
+
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+
+            div+div {
+                margin-top: calc($index / 2);
+            }
+
+            .footer-news__item {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: calc($index / 2);
+
+                a {
+                    color: $grayLColor;
+                    font-size: 14px;
+
+                    &:hover {
+                        color: $yellowColor;
+                    }
+                }
+            }
+
+            .footer-news__link {
+                display: inline-block;
+                width: 100%;
+                max-width: 115px;
+                height: 80px;
+                overflow: hidden;
+                margin-top: 5px;
+                border-radius: 5px;
+                position: relative;
+
+                @media screen and (max-width: 1199px) {
+                    height: 60px;
+                }
+            }
+
+            .footer-news__image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+            }
+
+            .footer-news__date {
+                color: $grayMColor;
+            }
+        }
+
+        &-contacts {
+            display: flex;
+            flex-direction: column;
+            flex: 0 1 25%;
+
+            @media screen and (max-width: 991px) {
+                flex: 0 1 50%;
+                flex: 0 1 calc(50% - 10px);
+            }
+
+            @media screen and (max-width: 767px) {
+                flex: 0 1 100%;
+                align-items: center;
+            }
+
+            &--title {
+                text-transform: uppercase;
+                width: 100%;
+                margin-bottom: calc($index);
+                font-weight: 700;
+
+                @media screen and (max-width: 767px) {
+                    text-align: center;
+                    margin-top: $index;
+                }
+            }
+
+            &--address {
+                display: grid;
+                grid-template-columns: 45px auto;
+                align-items: center;
+
+                @media screen and (max-width: 767px) {
+                    grid-template-columns: 0 auto;
+                }
+
+                .fa {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 45px;
+                    height: 45px;
+                    font-size: 34px;
+                    font-size: calc($index * 1.15);
+                    color: $grayDColor;
+
+                    @media screen and (max-width: 767px) {
+                        width: 0;
+                        height: 0;
+                        overflow: hidden;
+                    }
+                }
+            }
+
+            &--link {
+                color: $yellowColor;
+
+                &:hover {
+                    color: $yellowDColor
+                }
+            }
+        }
+
+        &-call {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 0 1 25%;
+
+            @media screen and (max-width: 991px) {
+                flex: 0 1 50%;
+                flex: 0 1 calc(50% - 10px);
+            }
+
+            &--title {
+                text-transform: uppercase;
+                width: 100%;
+                margin-bottom: calc($index);
+                font-weight: 700;
+                text-align: center;
+
+                @media screen and (max-width: 767px) {
+                    margin-top: $index;
+                }
+            }
+
+            &--tel {
+                text-align: center;
+                display: block;
+                font-family: 'Oswald', sans-serif;
+                font-size: 40px;
+                font-size: calc($index * 1.4);
+                font-weight: 500;
+                line-height: 50px;
+                text-decoration: none;
+                color: $yellowColor;
+
+                @media screen and (max-width: 767px) {
+                    font-size: 36px;
+                }
+
+                &:hover {
+                    color: $yellowDColor
+                }
+            }
+
+            &--button {
+                width: 100%;
+                max-width: 300px;
+                margin-top: 20px;
+                color: #222;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 25px;
+                font-weight: 400;
+                padding: 17px 30px;
+                cursor: pointer;
+                border-radius: 50px;
+                font-family: 'Oswald', serif;
+                border: 1px solid $yellowColor;
+                background-color: $yellowColor;
+                height: auto;
+
+                &:hover {
+                    background: $yellowDColor
+                }
+            }
+
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                position: relative;
+                margin-top: calc($index / 2);
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: 50%;
+                    display: block;
+                    width: 100%;
+                    max-width: 300px;
+                    height: 1px;
+                    background: $grayLColor;
+                }
+
+                span {
+                    padding: 0 10px;
+                    display: block;
+                    background: $blackColor;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    &__coryright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: $index;
+        }
+
+        &-powered {
+            a {
+                color: $yellowColor;
+
+                &:hover {
+                    color: $yellowDColor;
+                }
+            }
+        }
+
+        &-social {
+
+            &--icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 46px;
+                height: 46px;
+                text-align: center;
+                border: solid 1px $blackColor;
+                color: $grayLColor;
+                padding: 10px;
+                text-decoration: none;
+                font-size: 20px;
+
+                &:hover {
+                    background: $yellowColor;
+                    color: $grayDColor
+                }
+
+                &:nth-child(1):hover {
+                    background: #3b5998;
+                    color: inherit;
+                }
+
+                &:nth-child(2):hover {
+                    background: #44adb1;
+                    color: inherit;
+                }
+            }
+
+            a+a {
+                margin-left: calc($index / 2);
+            }
+        }
+    }
+}
